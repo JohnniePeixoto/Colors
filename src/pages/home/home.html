@@ -1,0 +1,20 @@
+<ion-content>
+  <div 
+    *ngIf="selectedColors.length"
+    (swipe)="changePage($event)"
+    [style.background-color]="selectedColors[index].color">
+    
+    <span id="menu" class="float-left">
+      <ion-icon name="menu"
+                (tap)="vibrate()"
+                (press)="vibrate()"
+                (click)="openMenu(false)"
+                (longPress)="openMenu(true)">        
+      </ion-icon>
+    </span>
+    
+    <div class="content" (click)="voice()">
+    </div>
+
+  </div>
+</ion-content>
